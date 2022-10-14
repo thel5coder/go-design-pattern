@@ -6,16 +6,17 @@ func main() {
 	builder := NewPeopleBuilder()
 	vidi := builder.SetFirstName("vidi").SetLastName("pandu").SetAge(9).Build()
 
-	fmt.Println(vidi.firstName+` `+ vidi.lastName+` umur `,vidi.age)
+	fmt.Println(vidi.firstName+` `+vidi.lastName+` umur `, vidi.age)
 }
 
 type People struct {
 	firstName string
 	lastName  string
 	age       int
+	hobby     string
 }
 
-func NewPeople(firstName,lastName string,age int) People{
+func NewPeople(firstName, lastName string, age int) People {
 	return People{
 		firstName: firstName,
 		lastName:  lastName,
@@ -79,7 +80,6 @@ func (p *PeopleBuilder) Age() int {
 	return p.age
 }
 
-
 func (p *PeopleBuilder) Build() People {
-	return NewPeople(p.firstName,p.lastName,p.age)
+	return NewPeople(p.firstName, p.lastName, p.age)
 }
