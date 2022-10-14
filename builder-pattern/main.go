@@ -13,6 +13,7 @@ type People struct {
 	firstName string
 	lastName  string
 	age       int
+	sex       string 
 }
 
 func NewPeople(firstName,lastName string,age int) People{
