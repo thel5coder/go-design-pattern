@@ -14,6 +14,7 @@ type People struct {
 	lastName  string
 	age       int
 	hobby     string
+	jobs      []string
 }
 
 func NewPeople(firstName, lastName string, age int) People {
